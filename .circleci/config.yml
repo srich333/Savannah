@@ -3,13 +3,18 @@
 
 version: 2.1
 
-jobs:
-  build:
+jobs: an online journal 
+  build: Journal with me  
+    docker:       
+      - image: buildpack-deps:trusty        
+    steps:       
+      - run: echo "Time To Journal"         
+  build:journal with me 
 
     macos:
       xcode: 11.0.0 # Specify the Xcode version to use
 
-    steps:
+    steps: open up a screen that says " set up passcode "
       - checkout
       - run: pod install # Install CocoaPods dependencies
       - run: fastlane scan # Run tests using Fastlane
